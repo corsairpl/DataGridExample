@@ -105,10 +105,16 @@ namespace DataGridExample
 
         private void LoadButton_Click(object sender, RoutedEventArgs e)
         {
-            datagrid2.ItemsSource = null;
-            datagrid2.ItemsSource = databaseConnection.Customers;
-            datagrid2.UpdateLayout();
-            datagrid2.Items.Refresh();
+            //odswiezanie datagrid
+
+            LINQtoSQLclassExample1DataContext databaseConnection_tmp = new LINQtoSQLclassExample1DataContext();
+            
+            datagrid3.ItemsSource = null;
+
+            datagrid3.UpdateLayout();
+            datagrid3.Items.Refresh();
+            datagrid3.ItemsSource = databaseConnection_tmp.Customers;
+
         }
 
         private void LoadButton2_Click(object sender, RoutedEventArgs e)
@@ -150,6 +156,16 @@ namespace DataGridExample
 
                 databaseConnection.SubmitChanges();
             }
+
+            //odswiezanie datagrid
+
+            LINQtoSQLclassExample1DataContext databaseConnection_tmp = new LINQtoSQLclassExample1DataContext();
+
+            datagrid3.ItemsSource = null;
+
+            datagrid3.UpdateLayout();
+            datagrid3.Items.Refresh();
+            datagrid3.ItemsSource = databaseConnection_tmp.Customers;
         }
     }
 }
