@@ -105,8 +105,10 @@ namespace DataGridExample
 
         private void LoadButton_Click(object sender, RoutedEventArgs e)
         {
-
+            datagrid2.ItemsSource = null;
+            datagrid2.ItemsSource = databaseConnection.Customers;
             datagrid2.UpdateLayout();
+            datagrid2.Items.Refresh();
         }
 
         private void LoadButton2_Click(object sender, RoutedEventArgs e)
