@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DatabaseTest1" Class="LINQtoSQLclassExample1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DatabaseTest1.mdf;Integrated Security=True" SettingsObjectName="DataGridExample.Properties.Settings" SettingsPropertyName="DatabaseTest1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Customers" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="CustomerID" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="NChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactName" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NChar(24)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
